@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.FirstFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_background"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/back_background"
+            app:layout_constraintRight_toRightOf="@id/back_background"
+            app:layout_constraintTop_toTopOf="@id/back_background" />
+
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/progress_pages"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/back_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_height="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/coloredbox"/>
+
+            <ImageView
+                android:layout_height="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                tools:ignore="Suspicious0dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/page_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            style="bold"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/progress_pages"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/4"
+            android:textSize="10dp"
+            app:layout_constraintTop_toTopOf="@id/page_no"
+            app:layout_constraintLeft_toRightOf="@id/page_no"/>
+        
+        <TextView
+            android:id="@+id/basic_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Basic Details"
+            android:textSize="30dp"
+            style="bold"
+            app:layout_constraintTop_toBottomOf="@id/page_no"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/feel_free_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Feel free to fill your details"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@id/basic_detail"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/text_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feel_free_text"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp" />
+
+        <EditText
+            android:id="@+id/field_fullname"
+            android:layout_width="match_parent"
+            android:hint="Name"
+            android:paddingLeft="10dp"
+            android:layout_height="30dp"
+            android:background="@drawable/text_box"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintTop_toBottomOf="@id/text_fullname"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
