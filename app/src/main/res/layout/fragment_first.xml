@@ -29,8 +29,6 @@
             app:layout_constraintRight_toRightOf="@id/back_background"
             app:layout_constraintTop_toTopOf="@id/back_background" />
 
-
-
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/progress_pages"
             android:layout_width="match_parent"
